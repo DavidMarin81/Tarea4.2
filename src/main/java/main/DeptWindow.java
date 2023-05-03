@@ -24,6 +24,7 @@ import javax.swing.event.ListSelectionListener;
 
 import src.main.java.main.CreateNewDeptDialog.TIPO_EDICION;
 import src.main.java.modelo.Departamento;
+import src.main.java.modelo.departamento.IDepartamentoDao;
 import src.main.java.modelo.exceptions.DuplicateInstanceException;
 import src.main.java.modelo.servicio.departamento.IServicioDepartamento;
 import src.main.java.modelo.servicio.departamento.ServicioDepartamento;
@@ -226,6 +227,10 @@ public class DeptWindow extends JFrame {
 	private void showDialog() {
 		createDialog.setVisible(true);
 		Departamento departamentoACrear = createDialog.getResult();
+		
+		//Se crea la instancia del servicio
+		ServicioDepartamento departamento = null;
+		
 		if (departamentoACrear != null) {
 
 			if (createDialog.getTipo() == TIPO_EDICION.CREAR) {
@@ -233,12 +238,24 @@ public class DeptWindow extends JFrame {
 				// métodos del servicio create o update en función de si se ha creado o editado
 				// el departamento.
 				// CREAR
+				try {
+					departamento.create(departamentoACrear);
+					addMensaje(true, "El departamento se ha creado/actualizado correctamente");
+				} catch (DuplicateInstanceException e) {
+					e.printStackTrace();
+					addMensaje(true, "Ya existe un departamento con ese id. No se ha podido crear.");
+				} catch (Exception ex) {
+					addMensaje(true, "Ha ocurrido un error y no se ha podido crear el departamento");
+				}
+				
 			} else if (createDialog.getTipo() == TIPO_EDICION.EDITAR) {
 				// TO DO
 				// Completa el método showDialog de DeptWindow.java para que llame a los métodos
 				// del servicio create o update en función de si se ha creado o editado el
 				// departamento.
 				// UPDATE
+				departamento.update(departamentoACrear);
+				addMensaje(true, "El departamento se ha creado/actualizado correctamente");
 			}
 
 			getAllDepartamentos();
