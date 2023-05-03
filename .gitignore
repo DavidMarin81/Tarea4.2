@@ -18,3 +18,8 @@ buildNumber.properties
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/maven
+/bin/
+/bin/
+/bin/
+/bin/
+/bin/
