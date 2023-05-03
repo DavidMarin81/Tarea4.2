@@ -1,4 +1,4 @@
-package main;
+package src.main.java.main;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import modelo.Departamento;
+import src.main.java.modelo.Departamento;
 import java.awt.Color;
 
 public class CreateNewDeptDialog extends JDialog {

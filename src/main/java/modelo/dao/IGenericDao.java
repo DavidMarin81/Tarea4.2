@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package modelo.dao;
+package src.main.java.modelo.dao;
 
 import java.util.List;
 
-import modelo.exceptions.InstanceNotFoundException;
+import src.main.java.modelo.exceptions.InstanceNotFoundException;
 
 /**
  *

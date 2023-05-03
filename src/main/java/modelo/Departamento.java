@@ -1,4 +1,4 @@
-package modelo;
+package src.main.java.modelo;
 // Generated 21:11:36, 10 de xan. de 2023 by Hibernate Tools 5.6.14.Final
 
 /**

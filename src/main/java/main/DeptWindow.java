@@ -1,4 +1,4 @@
-package main;
+package src.main.java.main;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -22,11 +22,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import main.CreateNewDeptDialog.TIPO_EDICION;
-import modelo.Departamento;
-import modelo.exceptions.DuplicateInstanceException;
-import modelo.servicio.departamento.IServicioDepartamento;
-import modelo.servicio.departamento.ServicioDepartamento;
+import src.main.java.main.CreateNewDeptDialog.TIPO_EDICION;
+import src.main.java.modelo.Departamento;
+import src.main.java.modelo.exceptions.DuplicateInstanceException;
+import src.main.java.modelo.servicio.departamento.IServicioDepartamento;
+import src.main.java.modelo.servicio.departamento.ServicioDepartamento;
 
 public class DeptWindow extends JFrame {
 
