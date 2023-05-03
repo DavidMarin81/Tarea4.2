@@ -8,6 +8,7 @@ import java.util.Properties;
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 
+
 public class ConnectionFactory {
 	private static ODB connection = null;
 	private static final String RUTA_FICHERO_CONFIG = "src/main/resources/db.properties";
